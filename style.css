@@ -1,0 +1,187 @@
+html, body, div, span, ul, img {
+	margin:0px;
+	padding:0px;
+	border:0px;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	line-height:1;
+}
+
+body {
+	width:100%;
+	background:#16477F url('images/background.gif') repeat-x;
+
+}
+
+a {
+	text-decoration:none;
+	color:#90C0D8;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+.content {
+	color:#fff;
+	width:1020px;
+	margin-left:auto;
+	margin-right:auto;
+	background:#16477F;
+	font-family:georgia,arial,times new roman;
+}
+
+.page {
+	min-height:560px;
+	background:#16477F;
+	margin:20px 30px;
+}
+
+.page h2 {
+	font-family:helvetica,georgia;
+	font-size:24pt;
+	color:#D6C731;
+	display:inline;
+}
+
+.page p {
+	font-family:arial;
+	font-size:12pt;
+}
+
+.page img {
+	padding:10px;
+	float:right;
+}
+
+.upload_form, .upload_form p  {
+	display:inline;
+	float:right;
+	padding-left:20px;
+	font-size:0.85em;
+}
+
+.header {
+	background:url('images/header.gif') no-repeat;
+	background-position:center;
+	height:380px;
+}
+
+
+.header ul {
+	padding-top:5px;
+}
+
+.header li {
+	vertical-align:bottom;
+	list-style-type:none;
+	display:inline;
+	padding-left:45px;	
+}
+
+.header img {
+	padding-right:50px;
+}
+
+.header form {
+	display:inline;
+	float:right;
+	padding-right:45px;
+}
+
+#loginform {
+	padding-left:20px;
+}
+
+.footer {
+	margin:0px;
+	padding:20px 50px;
+	font-family:trebuchet ms, arial;
+	font-size:12pt;
+	height:150px;
+	background:#396BAD;
+	color:#fff;
+}
+
+#contactus {
+	float:left;
+}
+
+#links {
+	margin-left:300px;
+	float:center;
+}
+
+#copywrite {
+	float:right;
+	position:relative;
+	top:-80px;
+	width:200px;
+	
+}
+
+.footer h2 {
+	font-size:18pt;
+	margin:0px;
+}
+
+.footer p {
+	margin:10px 0px 5px 25px;
+}
+
+.footer a {
+	color:#0000bb;
+	text-decoration:none;
+}
+
+.footer a:hover {
+	color:#fff;
+}
+
+.checker {
+	display:inline;
+	margin-left:300px;
+}
+
+.uploads table { 
+	border:1px #396BAD  solid;
+	background:#18558a;
+}
+
+.uploads td, th {
+	padding:5px;
+}
+
+.uploads td {
+	font-size:0.75em;
+	font-family:arial,helvetica;
+}
+
+.uploads th {
+	border-bottom:1px #396BAD solid;
+}
+
+#table_title {
+	background:url('images/stripes.png') repeat;
+}
+
+.uploads a {
+	color:#90C0D8;
+}
+
+#styled_popup {
+	width:400px;
+	display:none;
+	position:absolute;
+	top:20px;
+	left:400px;
+	color:#000;
+}
+
+#teacher_comment {
+	width:50%;
+	float:right;
+	padding:25px;
+	font-family:verdana, helvetica, arial;
+}

@@ -1,0 +1,56 @@
+#include "textedit.h"
+#include "ui_textedit.h"
+#include "mainwindow.h"
+
+textEdit::textEdit(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::textEdit)
+{
+    ui->setupUi(this);
+    connect(ui->dialogQuit,SIGNAL(clicked()),this,SLOT(close()));
+    connect(ui->searchEdit,SIGNAL(textEdited(QString)),this,SLOT(searchEnable(QString)));
+    connect(ui->replaceEdit,SIGNAL(textChanged(QString)),this,SLOT(replaceEnable(QString)));
+    connect(ui->dialogSearch,SIGNAL(clicked()),this,SLOT(sendText()));
+    connect(ui->replaceEdit,SIGNAL(cursorPositionChanged(int,int)),this,SLOT(replaceEditEnabled()));
+    connect(ui->dialogReplace,SIGNAL(clicked()),this,SLOT(replaceText()));
+
+}
+
+textEdit::~textEdit()
+{
+    delete ui;
+}
+
+void textEdit::searchEnable() {
+     ui->dialogSearch->setEnabled(true);
+     ui->replaceEdit->setEnabled(true);
+}
+
+void textEdit::replaceEnable() {
+    ui->dialogReplace->setEnabled(true);
+}
+
+void textEdit::sendText() {
+    emit textInserted(ui->searchEdit->text());
+}
+
+void textEdit::replaceText() {
+    emit textInserted(ui->replaceEdit->text());
+}
+
+void textEdit::replaceTextClicked()
+{
+    emit replaceText(ui->replaceEdit->text());
+}
+
+void Dialog::changeEvent(QEvent *e)
+{
+    QDialog::changeEvent(e);
+    switch (e->type()) {
+    case QEvent::LanguageChange:
+        ui->retranslateUi(this);
+        break;
+    default:
+        break;
+    }
+}

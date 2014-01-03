@@ -1,0 +1,34 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
+#include <QtGui>
+#include "textedit.h"
+
+namespace Ui {
+    class MainWindow;
+}
+class QTextEdit;
+class Dialog;
+
+class MainWindow : public QMainWindow {
+    Q_OBJECT
+public:
+    MainWindow(QWidget *parent = 0);
+    ~MainWindow();
+
+protected:
+    void changeEvent(QEvent *e);
+
+private slots:
+    void fshow();
+    void searchFunction(QString);
+    void replace(QString);
+
+private:
+    Ui::MainWindow *ui;
+    QTextEdit *q;
+    textEdit *d;
+};
+
+#endif // MAINWINDOW_H

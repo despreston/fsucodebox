@@ -1,0 +1,50 @@
+body {
+	background:#16477F url('images/mini_background.gif') repeat-x;
+}
+
+#home_link {
+	color:#fff;
+	font-family:verdana;
+	font-size:12pt;
+	text-decoration:none;
+	display:inline;
+	float:right;
+	padding:8px 30px 0px 0px;
+}
+
+.mini_header {
+	background:url('images/mini_header.gif') no-repeat;
+	background-position:center;
+	height:33px;
+}
+
+.mini_header ul {
+	padding-top:5px;
+}
+
+.mini_header li {
+	vertical-align:bottom;
+	list-style-type:none;
+	display:inline;
+	padding-left:45px;	
+}
+
+.mini_header img {
+	padding-right:50px;
+}
+
+.mini_header form {
+	display:inline;
+	float:right;
+	padding-right:45px;
+}
+
+.registration li {
+	list-style-type:none;
+	margin-top:20px;
+}
+
+.registration input {
+	position:absolute;
+	left:250px;
+}
